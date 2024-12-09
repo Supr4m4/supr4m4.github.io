@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://supr4m4.github.io/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Heelo World">
 <meta name="twitter:card" content="summary">
 
 
@@ -111,7 +111,7 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Heelo World</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap animated">
@@ -157,7 +157,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Heelo World">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -171,7 +171,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/12/09/git-intro/" class="post-title-link" itemprop="url">Git核心概念总结</a>
+          <a href="/2024/12/09/git-intro/" class="post-title-link" itemprop="url">城市漫步指南：海牙，从维米尔到席凡宁根</a>
         </h2>
 
         <div class="post-meta-container">
@@ -183,7 +183,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-12-09 20:04:59 / 修改时间：19:51:40" itemprop="dateCreated datePublished" datetime="2024-12-09T20:04:59+08:00">2024-12-09</time>
+      <time title="创建时间：2024-12-09 20:04:59 / 修改时间：21:46:49" itemprop="dateCreated datePublished" datetime="2024-12-09T20:04:59+08:00">2024-12-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -191,7 +191,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a>
+          <a href="/categories/%E6%97%85%E6%B8%B8%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">旅游笔记</span></a>
         </span>
     </span>
 
@@ -205,131 +205,39 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="什么是版本控制"><a href="#什么是版本控制" class="headerlink" title="什么是版本控制"></a>什么是版本控制</h3><p>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。 除了项目源代码，你可以对任何类型的文件进行版本控制。</p>
-<h3 id="为什么要版本控制"><a href="#为什么要版本控制" class="headerlink" title="为什么要版本控制"></a>为什么要版本控制</h3><p>有了它你就可以将某个文件回溯到之前的状态，甚至将整个项目都回退到过去某个时间点的状态，你可以比较文件的变化细节，查出最后是谁修改了哪个地方，从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功能缺陷等等。</p>
-<h3 id="本地版本控制系统"><a href="#本地版本控制系统" class="headerlink" title="本地版本控制系统"></a>本地版本控制系统</h3><p>许多人习惯用复制整个项目目录的方式来保存不同的版本，或许还会改名加上备份时间以示区别。 这么做唯一的好处就是简单，但是特别容易犯错。 有时候会混淆所在的工作目录，一不小心会写错文件或者覆盖意想外的文件。</p>
-<p>为了解决这个问题，人们很久以前就开发了许多种本地版本控制系统，大多都是采用某种简单的数据库来记录文件的历次更新差异。</p>
-<p><img src="https://oss.javaguide.cn/github/javaguide/tools/git/%E6%9C%AC%E5%9C%B0%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F.png" alt="本地版本控制系统"></p>
-<h3 id="集中化的版本控制系统"><a href="#集中化的版本控制系统" class="headerlink" title="集中化的版本控制系统"></a>集中化的版本控制系统</h3><p>接下来人们又遇到一个问题，如何让在不同系统上的开发者协同工作？ 于是，集中化的版本控制系统（Centralized Version Control Systems，简称 CVCS）应运而生。</p>
-<p>集中化的版本控制系统都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。</p>
-<p><img src="https://oss.javaguide.cn/github/javaguide/tools/git/%E9%9B%86%E4%B8%AD%E5%8C%96%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F.png" alt="集中化的版本控制系统"></p>
-<p>这么做虽然解决了本地版本控制系统无法让在不同系统上的开发者协同工作的诟病，但也还是存在下面的问题：</p>
-<ul>
-<li><strong>单点故障：</strong> 中央服务器宕机，则其他人无法使用；如果中心数据库磁盘损坏又没有进行备份，你将丢失所有数据。本地版本控制系统也存在类似问题，只要整个项目的历史记录被保存在单一位置，就有丢失所有历史更新记录的风险。</li>
-<li><strong>必须联网才能工作：</strong> 受网络状况、带宽影响。</li>
-</ul>
-<h3 id="分布式版本控制系统"><a href="#分布式版本控制系统" class="headerlink" title="分布式版本控制系统"></a>分布式版本控制系统</h3><p>于是分布式版本控制系统（Distributed Version Control System，简称 DVCS）面世了。 Git 就是一个典型的分布式版本控制系统。</p>
-<p>这类系统，客户端并不只提取最新版本的文件快照，而是把代码仓库完整地镜像下来。 这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。</p>
-<p><img src="https://oss.javaguide.cn/github/javaguide/tools/git/%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F.png" alt="分布式版本控制系统"></p>
-<p>分布式版本控制系统可以不用联网就可以工作，因为每个人的电脑上都是完整的版本库，当你修改了某个文件后，你只需要将自己的修改推送给别人就可以了。但是，在实际使用分布式版本控制系统的时候，很少会直接进行推送修改，而是使用一台充当“中央服务器”的东西。这个服务器的作用仅仅是用来方便“交换”大家的修改，没有它大家也一样干活，只是交换修改不方便而已。</p>
-<p>分布式版本控制系统的优势不单是不必联网这么简单，后面我们还会看到 Git 极其强大的分支管理等功能。</p>
-<h2 id="认识-Git"><a href="#认识-Git" class="headerlink" title="认识 Git"></a>认识 Git</h2><h3 id="Git-简史"><a href="#Git-简史" class="headerlink" title="Git 简史"></a>Git 简史</h3><p>Linux 内核项目组当时使用分布式版本控制系统 BitKeeper 来管理和维护代码。但是，后来开发 BitKeeper 的商业公司同 Linux 内核开源社区的合作关系结束，他们收回了 Linux 内核社区免费使用 BitKeeper 的权力。 Linux 开源社区（特别是 Linux 的缔造者 Linus Torvalds）基于使用 BitKeeper 时的经验教训，开发出自己的版本系统，而且对新的版本控制系统做了很多改进。</p>
-<h3 id="Git-与其他版本管理系统的主要区别"><a href="#Git-与其他版本管理系统的主要区别" class="headerlink" title="Git 与其他版本管理系统的主要区别"></a>Git 与其他版本管理系统的主要区别</h3><p>Git 在保存和对待各种信息的时候与其它版本控制系统有很大差异，尽管操作起来的命令形式非常相近，理解这些差异将有助于防止你使用中的困惑。</p>
-<p>下面我们主要说一个关于 Git 与其他版本管理系统的主要差别：<strong>对待数据的方式</strong>。</p>
-<p><strong>Git 采用的是直接记录快照的方式，而非差异比较。我后面会详细介绍这两种方式的差别。</strong></p>
-<p>大部分版本控制系统（CVS、Subversion、Perforce、Bazaar 等等）都是以文件变更列表的方式存储信息，这类系统<strong>将它们保存的信息看作是一组基本文件和每个文件随时间逐步累积的差异。</strong></p>
-<p>具体原理如下图所示，理解起来其实很简单，每当我们提交更新一个文件之后，系统都会记录这个文件做了哪些更新，以增量符号 Δ(Delta)表示。</p>
-<p><img src="https://oss.javaguide.cn/github/javaguide/tools/git/2019-3deltas.png"></p>
-<p><strong>我们怎样才能得到一个文件的最终版本呢？</strong></p>
-<p>很简单，高中数学的基本知识，我们只需要将这些原文件和这些增加进行相加就行了。</p>
-<p><strong>这种方式有什么问题呢？</strong></p>
-<p>比如我们的增量特别特别多的话，如果我们要得到最终的文件是不是会耗费时间和性能。</p>
-<p>Git 不按照以上方式对待或保存数据。 反之，Git 更像是把数据看作是对小型文件系统的一组快照。 每次你提交更新，或在 Git 中保存项目状态时，它主要对当时的全部文件制作一个快照并保存这个快照的索引。 为了高效，如果文件没有修改，Git 不再重新存储该文件，而是只保留一个链接指向之前存储的文件。 Git 对待数据更像是一个 <strong>快照流</strong>。</p>
-<p><img src="https://oss.javaguide.cn/github/javaguide/tools/git/2019-3snapshots.png"></p>
-<h3 id="Git-的三种状态"><a href="#Git-的三种状态" class="headerlink" title="Git 的三种状态"></a>Git 的三种状态</h3><p>Git 有三种状态，你的文件可能处于其中之一：</p>
-<ol>
-<li><strong>已提交（committed）</strong>：数据已经安全的保存在本地数据库中。</li>
-<li><strong>已修改（modified）</strong>：已修改表示修改了文件，但还没保存到数据库中。</li>
-<li><strong>已暂存（staged）</strong>：表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。</li>
-</ol>
-<p>由此引入 Git 项目的三个工作区域的概念：<strong>Git 仓库(.git directory)<strong>、</strong>工作目录(Working Directory)</strong> 以及 <strong>暂存区域(Staging Area)</strong> 。</p>
-<p><img src="https://oss.javaguide.cn/github/javaguide/tools/git/2019-3areas.png"></p>
-<p><strong>基本的 Git 工作流程如下：</strong></p>
-<ol>
-<li>在工作目录中修改文件。</li>
-<li>暂存文件，将文件的快照放入暂存区域。</li>
-<li>提交更新，找到暂存区域的文件，将快照永久性存储到 Git 仓库目录。</li>
-</ol>
-<h2 id="Git-使用快速入门"><a href="#Git-使用快速入门" class="headerlink" title="Git 使用快速入门"></a>Git 使用快速入门</h2><h3 id="获取-Git-仓库"><a href="#获取-Git-仓库" class="headerlink" title="获取 Git 仓库"></a>获取 Git 仓库</h3><p>有两种取得 Git 项目仓库的方法。</p>
-<ol>
-<li>在现有目录中初始化仓库: 进入项目目录运行 <code>git init</code> 命令,该命令将创建一个名为 <code>.git</code> 的子目录。</li>
-<li>从一个服务器克隆一个现有的 Git 仓库: <code>git clone [url]</code> 自定义本地仓库的名字: <code>git clone [url] directoryname</code></li>
-</ol>
-<h3 id="记录每次更新到仓库"><a href="#记录每次更新到仓库" class="headerlink" title="记录每次更新到仓库"></a>记录每次更新到仓库</h3><ol>
-<li><strong>检测当前文件状态</strong> : <code>git status</code></li>
-<li><strong>提出更改（把它们添加到暂存区</strong>）：<code>git add filename</code> (针对特定文件)、<code>git add *</code>(所有文件)、<code>git add *.txt</code>（支持通配符，所有 .txt 文件）</li>
-<li><strong>忽略文件</strong>：<code>.gitignore</code> 文件</li>
-<li><strong>提交更新:</strong> <code>git commit -m &quot;代码提交信息&quot;</code> （每次准备提交前，先用 <code>git status</code> 看下，是不是都已暂存起来了， 然后再运行提交命令 <code>git commit</code>）</li>
-<li><strong>跳过使用暂存区域更新的方式</strong> : <code>git commit -a -m &quot;代码提交信息&quot;</code>。 <code>git commit</code> 加上 <code>-a</code> 选项，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过 <code>git add</code> 步骤。</li>
-<li><strong>移除文件</strong>：<code>git rm filename</code> （从暂存区域移除，然后提交。）</li>
-<li><strong>对文件重命名</strong>：<code>git mv README.md README</code>(这个命令相当于<code>mv README.md README</code>、<code>git rm README.md</code>、<code>git add README</code> 这三条命令的集合)</li>
-</ol>
-<h3 id="一个好的-Git-提交消息"><a href="#一个好的-Git-提交消息" class="headerlink" title="一个好的 Git 提交消息"></a>一个好的 Git 提交消息</h3><p>一个好的 Git 提交消息如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">标题行：用这一行来描述和解释你的这次提交</span><br><span class="line"></span><br><span class="line">主体部分可以是很少的几行，来加入更多的细节来解释提交，最好是能给出一些相关的背景或者解释这个提交能修复和解决什么问题。</span><br><span class="line"></span><br><span class="line">主体部分当然也可以有几段，但是一定要注意换行和句子不要太长。因为这样在使用 &quot;git log&quot; 的时候会有缩进比较好看。</span><br></pre></td></tr></table></figure>
-
-<p>提交的标题行描述应该尽量的清晰和尽量的一句话概括。这样就方便相关的 Git 日志查看工具显示和其他人的阅读。</p>
-<h3 id="推送改动到远程仓库"><a href="#推送改动到远程仓库" class="headerlink" title="推送改动到远程仓库"></a>推送改动到远程仓库</h3><ul>
-<li><p>如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器，你可以使用如下命令添加：<code>git remote add origin &lt;server&gt;</code> ,比如我们要让本地的一个仓库和 GitHub 上创建的一个仓库关联可以这样<code>git remote add origin https://github.com/Snailclimb/test.git</code></p>
-</li>
-<li><p>将这些改动提交到远端仓库：<code>git push origin master</code> (可以把 <em>master</em> 换成你想要推送的任何分支)</p>
-<p>如此你就能够将你的改动推送到所添加的服务器上去了。</p>
-</li>
-</ul>
-<h3 id="远程仓库的移除与重命名"><a href="#远程仓库的移除与重命名" class="headerlink" title="远程仓库的移除与重命名"></a>远程仓库的移除与重命名</h3><ul>
-<li>将 test 重命名为 test1：<code>git remote rename test test1</code></li>
-<li>移除远程仓库 test1:<code>git remote rm test1</code></li>
-</ul>
-<h3 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h3><p>在提交了若干更新，又或者克隆了某个项目之后，你也许想回顾下提交历史。 完成这个任务最简单而又有效的工具是 <code>git log</code> 命令。<code>git log</code> 会按提交时间列出所有的更新，最近的更新排在最上面。</p>
-<p><strong>可以添加一些参数来查看自己希望看到的内容：</strong></p>
-<p>只看某个人的提交记录：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --author=bob</span><br></pre></td></tr></table></figure>
-
-<h3 id="撤销操作"><a href="#撤销操作" class="headerlink" title="撤销操作"></a>撤销操作</h3><p>有时候我们提交完了才发现漏掉了几个文件没有添加，或者提交信息写错了。 此时，可以运行带有 <code>--amend</code> 选项的提交命令尝试重新提交：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
-
-<p>取消暂存的文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset filename</span><br></pre></td></tr></table></figure>
-
-<p>撤消对文件的修改:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- filename</span><br></pre></td></tr></table></figure>
-
-<p>假如你想丢弃你在本地的所有改动与提交，可以到服务器上获取最新的版本历史，并将你本地主分支指向它：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br><span class="line">git reset --hard origin/master</span><br></pre></td></tr></table></figure>
-
-<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>分支是用来将特性开发绝缘开来的。在你创建仓库的时候，<em>master</em> 是“默认”的分支。在其他分支上进行开发，完成后再将它们合并到主分支上。</p>
-<p>我们通常在开发新功能、修复一个紧急 bug 等等时候会选择创建分支。单分支开发好还是多分支开发好，还是要看具体场景来说。</p>
-<p>创建一个名字叫做 test 的分支</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch test</span><br></pre></td></tr></table></figure>
-
-<p>切换当前分支到 test（当你切换分支的时候，Git 会重置你的工作目录，使其看起来像回到了你在那个分支上最后一次提交的样子。 Git 会自动添加、删除、修改文件以确保此时你的工作目录和这个分支最后一次提交时的样子一模一样）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout test</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://oss.javaguide.cn/github/javaguide/tools/git/2019-3%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF.png"></p>
-<p>你也可以直接这样创建分支并切换过去(上面两条命令的合写)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b feature_x</span><br></pre></td></tr></table></figure>
-
-<p>切换到主分支</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
-
-<p>合并分支(可能会有冲突)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge test</span><br></pre></td></tr></table></figure>
-
-<p>把新建的分支删掉</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d feature_x</span><br></pre></td></tr></table></figure>
-
-<p>将分支推送到远端仓库（推送成功后其他人可见）：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin</span><br></pre></td></tr></table></figure>
-
-<h2 id="学习资料推荐"><a href="#学习资料推荐" class="headerlink" title="学习资料推荐"></a>学习资料推荐</h2><p><strong>在线演示学习工具：</strong></p>
-<p>「补充，来自<a target="_blank" rel="noopener" href="https://github.com/Snailclimb/JavaGuide/issues/729">issue729</a>」Learn Git Branching <a target="_blank" rel="noopener" href="https://oschina.gitee.io/learn-git-branching/">https://oschina.gitee.io/learn-git-branching/</a> 。该网站可以方便的演示基本的 git 操作，讲解得明明白白。每一个基本命令的作用和结果。</p>
-<p><strong>推荐阅读：</strong></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/anding/p/16987769.html">Git 入门图文教程(1.5W 字 40 图)</a>：超用心的一篇文章，内容全面且附带详细的图解，强烈推荐！</li>
-<li><a target="_blank" rel="noopener" href="https://rogerdudler.github.io/git-guide/index.zh.html">Git - 简明指南</a>：涵盖 Git 常见操作，非常清晰。</li>
-<li><a target="_blank" rel="noopener" href="https://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解 Git</a>：图解 Git 中的最常用命令。如果你稍微理解 git 的工作原理，这篇文章能够让你理解的更透彻。</li>
-<li><a target="_blank" rel="noopener" href="https://backlog.com/git-tutorial/cn/intro/intro1_1.html">猴子都能懂得 Git 入门</a>：有趣的讲解。</li>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">Pro Git book</a>：国外的一本 Git 书籍，被翻译成多国语言，质量很高。</li>
-</ul>
+          <p>当我们谈起荷兰，头脑风暴一下，会想到什么？若是在世纪之初那些年，历史课本和广电资讯作为主流信息源，侧写尼德兰的印象词，我大概会说：海洋霸权，东印度公司，郁金香和风车，梵高和范尼斯特鲁伊。而时至今日，反全球化趋势盛行，吊诡的国际关系，既保守又先锋的意识心态，特别是随身携带互联网后，在读者和大数据相互推动下，我猜可能会刷出这些词条：芯片与光刻机，200% 的新能源车关税，同性婚姻，彩虹运动，性解放，难民、移民和少数族裔，自行车，弗米尔，喜力和滕哈赫……</p>
+<p>荷兰、西班牙、阿根廷似乎就是这样一类国家，祖上曾经阔过，历史上向全球施展影响力，尽管如今式微，但声名余音延续至今。他们地理上与我们遥隔千里，关系冷暖仰仗外交亲疏时令，民间交流显得不温不火，这些国家以其盛名城市给人留下的印象，要远大于其作为一国所应有的存在感，如同大连之于辽宁，青岛之于山东。其中一些城市，具体地说是某些欧洲的中心城市，如布鲁塞尔，苏黎世，确有一种游离出本国之外的新闻感，或说是纪录片感，人们对这些城市的认识大概是先要抽离出自己，需要旁白以第三人称叙事其过去时和现在进行时的故事。海牙亦是如此，因常出现在七点新闻，知晓的人肯定不少，但在简中互联网平台的资讯，肯定不如济州、大阪、曼谷说得上纷繁细致。脱离短平快的信息载体，海牙对大多数人来说仍然陌生。</p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>回顾起去年十一月底的荷德之行，略显紧张且颠沛。由于俄乌战争形势，临行前欧洲能源吃紧，交通和住宿费用大涨，导致预算直接血崩，还遇到欧洲 70 年一遇的大雪，慕尼黑回程阿姆斯特丹航班连续取消 4 日，造成我无法按计划乘国内航司回家，以至于在机场蹭着 3G 网速的 WiFi 刷着机票绕了半个北半球折腾回国（BTW 托运行李是在我回到南京一周之后才从阿布扎比快递回来的）。已经滞留机场五天的大叔一家，非得塞给我喝柏林酸啤酒以宽心，一边哈拉一边忐忑，峰终体验，跌宕畅快。</p>
+<p>而在海牙的 48 小时，如在动作片中的浪漫戏码，平和温暖，安逸舒适，宁静好眠，恰巧天公作美，应该是欧洲北部满分冬日的标杆。焦虑和惊喜一样，应该是自由行的必要产物，翻阅 iPhone 照片推送，心绪仍然暖暖内含光。</p>
+<h3 id="首都不首"><a href="#首都不首" class="headerlink" title="首都不首"></a>首都不首</h3><p>总览寰宇之内首都名城，大部分可以用课本定义的「三心合一」来定义，即政治、经济、文化中心于一体，少部分国家随着经济社会发展需求，或乔迁新都或规划出独立行政区域，剥离出经济引擎，把行政中心功能脱离出来单立成体，而海牙算是打破了我一个惯常思维——如果不是人造新城，老字号政治中心必将发展成一国之首。但给我感觉是，阿姆斯特丹作为首都其「政」感明显不如海牙，阿姆首都不首，海牙垂帘在侧。荷兰的中央政府、国会、外国使馆及大批政府机构都设在海牙，连荷兰国王常住地也在海牙，此外，海牙也是国际法院和国际刑事法院等多个国际组织的所在地，因此海牙才是荷兰名副其实的政治中心。</p>
+<p>1230 年兴起，最初只不过是荷兰伯爵的私人游猎场所（Des Graven Hage），后来名称逐渐演变为海牙（Den Haag）。1248 年，荷兰伯爵、也是当时的罗马人民的国王威廉二世在沙丘湖（今霍夫维弗湖）修筑了一座更雄伟的城堡，在其子弗洛里斯五世（Floris V）统治期间竣工，成为后来的内庭（今荷兰国会议事堂）。从共和国时期，到现在的君主立宪，内庭都是荷兰国会所在。当时荷兰是七省联合共和国，联邦制共和国没有国王，最高权力机构就是联省国会，城堡内的大厅仍保存至今，即今日的骑士厅。17 世纪，荷兰共和国独立，进入黄金时代，与阿姆斯特丹和鹿特丹不同，海牙在黄金时代主要发挥政治中心的作用，自此确立了司法与政治构成了城市核心业务影响至今，以 2006 年为例，海牙有 26% 的人口（即 56,000 人）在政府与国际组织工作。</p>
+<h3 id="有湖则灵"><a href="#有湖则灵" class="headerlink" title="有湖则灵"></a>有湖则灵</h3><p>可能是和我居住的城市南京有关，若解锁到新城市有穿城运河或绕城的卫河都会平添好感。有水的城市往往比较有灵气，秦淮河成就金陵城钟灵毓秀不必多说，雅芳河像是精致发卡点缀着天空之城奥克兰，莱茵河串联着西德政经双城波恩和科隆……海牙亦是一座运河城市，统治者拿骚家族为了加强海牙城防，修筑了大量的运河，但随着历史演变城市发展需求，运河逐渐褪去海防的主要功能，成了海牙人步履可达的惬意河畔。</p>
+<p>自行车规矩排列停靠在水岸护栏，落叶堆叠轧踏成黄泥，公园长凳是年轻人抢手的野餐桌，野花草和郁金香美了里子响了面子。高个子的本地人通勤步速令人咋舌，步伐之后留下不可明说的烟叶余味；小小孩带着喂食挑逗着潟湖畔的海鸥，一场勇与偷的对决；老人持着长柄伞走走停停，交谈中带着手势和动作热烈拉满。当我停下步伐休憩片刻，不经觉得都市人的花园即使如此，应该兼具资源支持和精神包容，同时秩序感令人人不逾矩，让人宁静地放松，让人平和地专注，让人自由地去做当下想做的事情且不冒犯他人。</p>
+<p>印象中政治中心通常会有高墙、堡垒、深邸的建筑地标，给人以威严、秩序、等级印象标签，而霍夫维弗湖畔呈现的氛围则是亲切松弛，宜居恬淡，从沿街的选举广告牌可见一番，不懂荷兰语乍看之下颇像宜家或者宝洁广告。团体的宣传少有敕令感的标语，竞选人主打理解和接地气一副「我懂你」的样子，仿佛不管投谁都是可以在一起包饺子的家人。在海牙两日，除了广告、新闻再少有能让人感受到政治的场景了，我想对于这里居民聊起国与政的时候，也大概与八卦日常并无二致，不会如懂王般端着起高调门，或是揶揄戏谑热点时事。</p>
+<h3 id="靠近维米尔"><a href="#靠近维米尔" class="headerlink" title="靠近维米尔"></a>靠近维米尔</h3><p>在欧洲看展，往往会有有一种小庙遇大佛的感受，确切点说是已知名作在此城，惊奇于其挂在相对不起眼的楼宇内，以一种难以置信的方式接近到名作。杜塞尔多夫的 K20，柏林的博物馆岛，多少都有这种感觉，艺术与百姓的距离，就是画作与观者的距离，如此抵近在国内不很常见。当我看到《戴珍珠耳环的少女》即有此感，进入莫瑞泰斯美术馆，上了三楼转角忽现，没有层层围挡保护画作，没有工作人员指手画脚，就这么出现了，像是寻常百姓家客厅到书房看到的生活照片，亲切自然。</p>
+<p>人物画犹如一道迷思，因为人物有眼神光，自然会让人把凝视的焦点置于此，仿佛在通过眼眸相互致意、神交。《戴珍珠耳环的少女》浓黑的背景前赫然呈现着身着明黄的靓丽少女，少女头巾上醒目的蓝色和黄色与黑色背景相映衬，寥寥几笔精巧的勾勒呈现出闪闪发光的珍珠，惊叹于维米尔是如何做到让她容光焕发的肌肤上表现出的光和影。不像达芬奇的《蒙娜丽莎》的高冷神秘，扣人心扉的「少女」看起来有一种似曾相识的邻家感觉。我们可能不知道她是谁，但我们会感觉与她一见如故，因为她在亲切地看着我们。捎带手推荐一部去年上海电影节展映过的纪录片《靠近维米尔 Close to Vermeer》，大神之作引得左派文艺人惊呼「私人收藏家们早晚会死，艺术品最终会进博物馆！」</p>
+<p>在莫瑞泰斯，还能看到荷兰油画家扬·弗美尔、伦勃朗、扬·斯特恩、保卢斯·波特和弗兰斯·哈尔斯的油画，以及德国油画家小汉斯·霍尔拜因的作品，值得租用个「解说宝」，有中文讲解，边听边看，啧啧称奇，哦哦连天。顺便说一下莫瑞泰斯美术馆原本是拿骚-锡根亲王约翰·毛里茨的私人宅邸，该美术馆与阿姆斯特丹国家博物馆和鹿特丹博伊曼斯·范伯宁恩美术馆并称荷兰的三大美术馆。</p>
+<h3 id="海边的席凡宁根"><a href="#海边的席凡宁根" class="headerlink" title="海边的席凡宁根"></a>海边的席凡宁根</h3><p>从美术馆到席凡宁根海滩会经过和平宫 Peace Palace，这里应该是整个海牙最难参观的景点，若临时到访几乎没有可能进入游览，不过可以提前预约宫内和花园的导览，但日期和时段限制严格，毕竟也是国际司法机构可以理解。和平宫大门口的 Gallery Center 可以小坐，简单看看世界和平发展大事记，购买文创、寄明信片，离开之前在象征世界和平的石环中找到来自 China 的石头，默默提升站位上点价值，也不觉得进不去遗憾了。</p>
+<p>走到此时已经累了，在和平宫门口等候电车，去往席凡宁根海滩。电车连接席凡宁根和中央车站，对自由行的旅人很友好，赶得了海滩日落，赶得上末班列车。秋冬季节北半球午后的阳光，暖暖日光所照之处无不显得慵懒，金色、橙色、米白、浅蓝、深蓝，目力之内陆海空色彩晕染如莫兰迪一般，过渡得恰恰好，印象派点彩画既视感。</p>
+<p>冬日海滨少了很多喧闹，蹦极和摩天轮都少了人气，热狗啤酒车摊密度锐减，海鲜档口也少了很多渔获，不过还是有席凡宁根安静的一面：围着灯塔抛杆海钓的男人，绕着码头在海风中跑步的女人，三五滑板的少年掠过手持啤酒的老人，玩着抛接找回的大狗和一家人在沙滩上奔腾……最自然的风景，带来最纯粹快乐，最易得的美好记忆往往与欲望达成所需的价码无关。</p>
+<p>海的对岸是英格兰，和所有北方苦寒之地一样，在这些地方生活久了容易阴郁。愉悦和温暖是生活的必需品，最容易精神取暖的方式就是从和陌生人打招呼开始，与朋友家人抱团相聚；而物质上淡薄物欲，啤酒、面包、蜂蜜、牛奶是自然的应允，接受馈赠心怀感恩即是生活正道。入夜后「李鸿章大饭店」灯火初上，库尔豪斯大酒店成了节日期间海滨热闹的中心，想象着欢乐还在继续，从室外转到室内，我在渐远的电车上看它和海滨融成一粒金珠。</p>
+<h3 id="尾巴"><a href="#尾巴" class="headerlink" title="尾巴"></a>尾巴</h3><p>海牙，不算耀眼，却让人流连。</p>
+<p>附一首本地诗人 Martinus Nijhoff 的《晚餐》：</p>
+<p>Wave took hold of us, how the wings of the</p>
+<p>巨浪如何掌控起我们</p>
+<p>Ship of time carried us on towards death.</p>
+<p>时间的船翼带我们驶向死亡。</p>
+<p>There was no place for us to hide together；</p>
+<p>我们一同 无处可藏</p>
+<p>A person, alone, sees his black aloneness</p>
+<p>More deeply reflected in the eyes of another；</p>
+<p>一个人，自己，更深刻地看到他黑影似的形单影只，在另一个人的眼中</p>
+<p>But as the winds cry against the roofs,</p>
+<p>但就当风在屋顶呼啸，</p>
+<p>Forget, forget where for our weak heart screams,</p>
+<p>忘却吧，忘却我们羸弱之心的尖叫，</p>
+<p>Laugh and smash the glasses one against the other.</p>
+<p>欢笑，碰杯。</p>
 <!-- @include: @article-footer.snippet.md -->
 
       
@@ -361,7 +269,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Heelo World">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -444,7 +352,7 @@
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">John Doe</span>
+    <span class="author" itemprop="copyrightHolder">Heelo World</span>
   </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
